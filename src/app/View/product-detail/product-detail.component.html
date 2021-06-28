@@ -1,0 +1,97 @@
+<app-header></app-header>
+<div class="breadcrumb-section set-bg" data-setbg="assets/images/breadcrumb.jpg" style="background-image: url('assets/images/breadcrumb.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h2>Shop</h2>
+          <div class="breadcrumb__option">
+            <a href="">Home</a>
+            <span>- Shop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-product__detail" *ngFor="let dataItem of product" >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="product-detail__img">
+          <img src="{{dataItem.image}}" width="150" height="500" style="border: 1px double #acb7c3;" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="product-detail__text">
+          <h3>{{dataItem.productName}}</h3>
+          <h4>{{dataItem.retailPrice}} $</h4>
+          <p>{{dataItem.reviews}}</p>
+          <a type="button" (click)="_addItemToCart(dataItem.productID,  1,1,dataItem.retailPrice)" class="primary-btn">ADD TO CART</a>
+          <ul>
+            <li>
+              <b>Quantity</b>
+              <span>{{dataItem.quantity}}</span>
+            </li>
+            <li>
+              <b>Availability</b>
+              <span>Còn hàng</span>
+            </li>
+            <li>
+              <b>Shipping</b>
+              <span>01 day shipping.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-product__info" *ngFor="let dataItem of product">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="product-des">
+          <div class="product-des__title">
+            <h5>Description</h5>
+          </div>
+          <div class="product-des__text">
+            <p>{{dataItem.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="product-related">
+          <div class="product-related__title">
+            <h5>Other image</h5>
+          </div>
+          <div class="product-related__img">
+            <a><img src="{{dataItem.image}}" style="border: 1px double #acb7c3;" alt=""></a>
+            <a><img src="{{dataItem.image}}" style="border: 1px double #acb7c3;" alt=""></a>
+            <a><img src="{{dataItem.image}}" style="border: 1px double #acb7c3;" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-reviews">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="reviews-title">
+          <h4>Review</h4>
+        </div>
+        <form action="" class="reviews-form">
+          <textarea class="message-col-12" name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <a href="" class="primary-btn">FEED BACK</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

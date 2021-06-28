@@ -1,0 +1,47 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+    
+
+    
+        <label class="col-sm-2 col-form-label">Oderdd ID</label>
+        <div class="col-sm-10">
+            <input type="text" [(ngModel)]="orderddID"
+            placeholder="Enter Product ID">
+        </div>
+        <label class="col-sm-2 col-form-label">Order ID</label>
+        <div class="col-sm-10">
+            <input type="text" [(ngModel)]="orderID"
+            placeholder="Enter Product ID">
+        </div>
+        <label class="col-sm-2 col-form-label">Product ID</label>
+        <div class="col-sm-10">
+            <input type="text" [(ngModel)]="productID"
+            placeholder="Enter Product ID">
+        </div>
+        <label class="col-sm-2 col-form-label">Quantity</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="quantity">
+        </div>
+        <label class="col-sm-2 col-form-label">Price</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="price">
+        </div>
+        
+        
+        
+    </div>
+    
+</div>
+        <button (click)="addOrderDetail()" *ngIf="odd.orderID==0" class="btn btn-primary">
+            Add
+        </button>
+        
+        <button (click)="updateOrderDetail()" *ngIf="odd.orderID!=0" class="btn btn-primary">
+            Update
+        </button>
+    
+    
+    
+    
+    

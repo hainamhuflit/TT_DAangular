@@ -1,0 +1,29 @@
+.wrap {
+  padding: 2rem;
+}
+
+table {
+  margin-top: 10px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.t-head th {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.t-body td {
+  overflow: hidden;
+  text-align: center;
+  width: 100px;
+  padding: 20px;
+  white-space: nowrap;
+  border: solid 1px #666;
+}
+
+.t-body td img {
+  height: 100px;
+  width: 100px;
+}

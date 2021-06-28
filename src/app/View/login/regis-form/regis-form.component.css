@@ -1,0 +1,66 @@
+.login {
+  padding: 70px 0;
+}
+
+.pad-in {
+padding: 0 100px;
+}
+
+.card {
+  border: 0;
+}
+
+.bg-login-image {
+background-position: center;
+background-size: cover;
+}
+
+.bg {
+background: #F3F6FA;
+}
+
+.wrapper {
+  padding: 5rem;
+}
+
+.wrapper .text-center h1 {
+font-size: 32px;
+margin-bottom: 10px;
+}
+
+.border-1 {
+border-radius: 20px;
+height: 45px;
+width: 100%;
+}
+
+.user input {
+  padding: 20px;
+  font-size: 13px;
+}
+
+.login-btn {
+  font-size: 13px;
+  padding: 15px 20px;
+  border-radius: 30px;
+  background: #7fad39;
+  border: 1px solid #7fad39;
+}
+
+.login-btn:hover {
+  color: #7fad39;
+  border: 1px solid #7fad39;
+  background-color: white;
+  font-weight: 500;
+}
+
+hr {
+margin-top: 1rem;
+margin-bottom: 1rem;
+border: 0;
+border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.create a:hover {
+text-decoration: none;
+}

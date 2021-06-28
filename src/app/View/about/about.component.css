@@ -1,0 +1,119 @@
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.breadcrumb-section {
+    padding: 45px 0 40px;
+    text-align: center;
+}
+
+.breadcrumb__text h2 {
+    font-size: 45px;
+    color: white;
+    font-weight: 800;
+}
+
+.breadcrumb__option a {
+    color: white;
+    font-weight: 800;
+    margin-right: 5px;
+    transition: 0.3s all ease-in-out;
+}
+
+.breadcrumb__option a:hover {
+    text-decoration: none;
+    color: #7fad39;
+}
+
+.breadcrumb__option span {
+    color: white;
+}
+
+.section-about {
+    padding: 50px 0;
+}
+
+.section-about .story-section img {
+    max-width: 100%;
+    border-radius: 10%;
+    margin: 20px;
+    box-shadow: 0px 0px 20px 0px #000;
+}
+
+.section-about .about__text {
+    padding: 30px;
+}
+
+.about-title h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 20px;
+    cursor: inherit;
+    color: #7fad39;
+}
+
+.about-content {
+    font-size: 16px;
+    padding: 10px;
+    color: #6f6f6f;
+}
+
+.about-content span {
+    color: black;
+    font-weight: 700;
+}
+
+.about-content p {
+    padding: 10px;
+    margin: 0;
+}
+
+.section-qualify {
+    padding: 50px 0;
+}
+
+.qualify-title h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: #7fad39;
+}
+
+.qualify {
+    padding: 20px 16px;
+    text-align: center;
+    color: #6f6f6f;
+}
+
+.qualify i {
+    font-size: 90px;
+    margin-bottom: 30px;
+    transition: 0.3s all ease-in-out;
+}
+
+.qualify h4 {
+    margin-bottom: 20px;
+    transition: 0.3s all ease-in-out;
+}
+
+.qualify:hover>i {
+    color: #7fad39;
+}
+
+.qualify:hover>h4 {
+    color: #7fad39;
+}
+
+.section-about .develop-section img {
+    max-width: 100%;
+    border-radius: 10%;
+    margin: 20px;
+    height: 350px;
+    box-shadow: 0px 0px 20px 0px #000;
+}
+

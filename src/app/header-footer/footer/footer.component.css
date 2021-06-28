@@ -1,0 +1,129 @@
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+#footer {
+    padding-top: 70px;
+    background: #F3F6FA;
+}
+
+#footer .footer__about {
+    margin-bottom: 30px;
+}
+
+#footer .footer__about__logo {
+    margin-bottom: 15px;
+}
+
+#footer .footer__about__logo img {
+    max-width: 100%;
+}
+
+#footer .footer__about ul li {
+    font-size: 16px;
+    color: #1c1c1c;
+    line-height: 36px;
+    list-style: none;
+}
+
+#footer .footer__widget {
+    margin: 30px 0;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+#footer .footer__widget ul {
+    width: 50%;
+    float: left;
+}
+
+#footer .footer__widget ul li {
+    list-style: none;
+    margin-bottom: 13px;
+}
+
+#footer .footer__widget ul li>a {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s all ease-in-out;
+}
+
+#footer .footer__widget ul li:hover>a {
+    color: #7fad39;
+    text-decoration: none;
+}
+
+#footer .footer__widget h6 {
+    color: #1c1c1c;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#footer .footer__widget p {
+    color: #1c1c1c;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+#footer .footer__widget form {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#footer .footer__widget form input {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 20px;
+    color: #1c1c1c;
+    height: 46px;
+    border: 1px solid #ededed;
+}
+
+#footer .footer__widget form input:focus {
+    outline: none;
+}
+
+#footer .footer__widget form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 26px;
+    height: 100%;
+}
+
+#footer .site-btn {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 13px 30px 12px;
+    background: #7fad39;
+    border: none;
+    transition: 0.3s all ease-in-out;
+}
+
+#footer .footer__widget__social a {
+    display: inline-block;
+    height: 41px;
+    width: 41px;
+    font-size: 16px;
+    color: #404040;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+    line-height: 38px;
+    text-align: center;
+    background: #ffffff;
+    transition: all, 0.3s;
+    margin-right: 10px;
+}
+
+#footer .footer__widget__social a:hover {
+  background: #7fad39;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+

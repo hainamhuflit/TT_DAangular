@@ -1,0 +1,64 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+
+
+
+        <label class="col-sm-2 col-form-label">productID</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="productID">
+        </div>
+        <label class="col-sm-2 col-form-label">Product Name</label>
+        <div class="col-sm-10">
+            <input type="text" [(ngModel)]="productName"
+            placeholder="Enter Product Name">
+        </div>
+        <label class="col-sm-2 col-form-label">description</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="description">
+        </div>
+        <label class="col-sm-2 col-form-label">wholesalePrice</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="wholesalePrice">
+        </div>
+        <label class="col-sm-2 col-form-label">retailPrice</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="retailPrice">
+        </div>
+        <label class="col-sm-2 col-form-label">quantity</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="quantity">
+        </div>
+        <label class="col-sm-2 col-form-label">categoriesID</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="categoriesID">
+        </div>
+        <label class="col-sm-2 col-form-label">reviews</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="reviews">
+        </div>
+        <label class="col-sm-2 col-form-label">supplierID</label>
+        <div class="col-sm-10">
+            <input type="text"  [(ngModel)]="supplierID">
+        </div>
+
+    </div>
+    <div class="ml-3 bd-highlight" style="width: 40%;">
+    <label>Image</label>
+        <div class="col-sm-10">
+            <img [src]=image height="200px;" width="200px;">
+                <input type="text"  [(ngModel)]="image">
+        </div>
+    </div>
+</div>
+        <button (click)="addProduct()" *ngIf="pro.productID==0" class="btn btn-primary" style="margin-right: 10px;">
+            Add
+        </button>
+
+        <button (click)="updateProduct()" *ngIf="pro.productID!=0" class="btn btn-primary">
+            Update
+        </button>
+
+
+
+

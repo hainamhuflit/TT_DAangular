@@ -1,0 +1,105 @@
+<app-header></app-header>
+<div class="breadcrumb-section set-bg" data-setbg="assets/images/breadcrumb.jpg"
+  style="background-image: url('assets/images/breadcrumb.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h2>News</h2>
+          <div class="breadcrumb__option">
+            <a href="">Home</a>
+            <span>- News</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<section class="news">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="news-sidebar">
+          
+          <div class="news-sidebar__item">
+            <h4>Recent News</h4>
+            <a href="" class="news-sidebar__recent__item" *ngFor="let dataItem of NewsDetailList ">
+              <div class="news-sidebar__recent__item__pic">
+                <a routerLink="/blog/{{dataItem.newsDetailID}}"><img  src="{{dataItem.image}}" height="100px" width="100px"></a>
+              </div>
+              <div class="news-sidebar__recent__item__text">
+                <a routerLink="/blog/{{dataItem.newsDetailID}}"><h6>{{dataItem.title}}</h6></a>
+                <span>{{dataItem.createDate}}</span>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-6" *ngFor="let dataItem of NewsDetailList ">
+            <div class="news-item">
+              <div class="news-item__pic">
+                <img style="margin-top: 15px;" src="{{dataItem.image}}">
+              </div>
+              <div class="news-item__content">
+                <ul>
+                  <li><i class="fas fa-calendar"></i>{{dataItem.createDate}}</li>
+                  <li><i class="fas fa-user"></i>{{dataItem.namePoster}}</li>
+                </ul>
+                <h5><a routerLink="/blog/{{dataItem.newsDetailID}}" style="display: -webkit-box;
+                  max-height: 3.2rem;
+                 -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: normal;
+                  -webkit-line-clamp: 2;
+                  line-height: 1.6rem;">{{dataItem.title}}</a></h5>
+                <p style="display: -webkit-box;
+                            max-height: 3.2rem;
+                           -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            -webkit-line-clamp: 2;
+                            line-height: 1.6rem;">{{dataItem.contents}}</p>
+                <a routerLink="/blog/{{dataItem.newsDetailID}}" class="news__button">Read more</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
+
+<!-- <div class="first-new__text">
+  <div class="first-new__title">
+    <h3>Cách làm mì bò sa tế cay</h3>
+  </div>
+  <div class="first-new__info">
+    <ul>
+      <li><i class="fas fa-calendar"></i></li>
+      <li>4/20/2021</li>
+    </ul>
+    <ul>
+      <li><i class="fas fa-user"></i></li>
+      <li>Admin</li>
+    </ul>
+  </div>
+  <div class="first-new__content">
+    <p>
+      Món mì bò sa tế đậm chất châu Á này sẽ là điểm nhấn trên bàn ăn ngày cuối tuần của bạn. Sốt sa tế ớt cay sẽ hòa quyện cùng tất cả các hương vị từ #bò và #rau_củ, chỉ cần thưởng thức một lần, bạn nhớ mãi cái vị đặc trưng của nước dùng nấu từ ớt, hành tây và nấm.  Những bát mì bò thơm lừng, tỏa hương nghi ngút được nêm nếm vừa miệng chắc chắn sẽ trở thành món ăn yêu thích của cả bạn và người ấy đấy...
+    </p>
+  </div>
+  <div class="first-new__button">
+    <a href="">See more</a>
+  </div>
+</div> -->

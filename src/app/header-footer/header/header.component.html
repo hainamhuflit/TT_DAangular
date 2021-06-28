@@ -1,0 +1,61 @@
+<div id="header-top">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-6 header-top-left">
+              <li>
+                <i class="fas fa-envelope"></i>
+                hello@colorlib.com
+              </li>
+              <li>Free Shipping for all Order of $99</li>
+          </div>
+          <div class="col-lg-6 header-top-right">
+              <div class="social-media-header">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+              </div>
+              <div class="login-header">
+                  <a routerLink="/login">
+                      <i class="fas fa-user"></i>
+                      Login
+                  </a>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="header" class="header">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="header__logo">
+              <a [routerLink]="['']" ><img src="assets/images/logo.png" alt=""></a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="header__menu">
+              <ul>
+                <li><a [routerLink]="['']" class="active">Home</a></li>
+                <li><a [routerLink]="['/about']" >About</a></li>
+                <li><a [routerLink]="['/shop']" >Shop</a></li>
+                <li><a [routerLink]="['/news']" >Blog</a></li>
+                <li><a [routerLink]="['/contact']" >Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="header__cart">
+                <li>
+                  <a routerLink='/cart'>
+                    <i class="fas fa-shopping-bag"></i>
+                  </a>
+                </li>
+                <div class="header__cart__price">
+                  item: <span> ${{cartTotal}}  </span>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>

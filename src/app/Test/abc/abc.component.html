@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+      <div class="spacer">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="col-lg-9">
+              <div class="row shop-listing">
+                <table class="table shop-table" *ngIf="carts">
+                  <tr>
+                    <th class="b-0">Name</th>
+                    <th class="b-0">Price</th>
+                    <th class="b-0">Quantity</th>
+                    <th class="b-0 text-right">Total Price</th>
+
+                  </tr>
+                  <tr *ngFor="let item of carts">
+                    <td>{{item.productName }}</td>
+                    <td>{{item.retailPrice }}</td>
+                    <td>
+                      <button class="btn btn-primary btn-sm" (click)="_increamentQTY(item.productID,  1,1,item.retailPrice * item.quanti)">+</button>
+                      {{ item.quanti}}
+                      <button class="btn btn-primary btn-sm"(click)="deleteClick(item)">-</button>
+                    </td>
+                    <td class="text-right">
+                      <h5 class="font-medium m-b-30">{{item.price}}</h5>
+                      
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td colspan="3" >Subtotal :{{cartTotal}} </td>
+                    
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+

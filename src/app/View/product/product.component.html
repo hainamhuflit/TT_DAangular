@@ -1,0 +1,98 @@
+<app-header></app-header>
+<div class="breadcrumb-section set-bg" data-setbg="assets/images/breadcrumb.jpg" style="background-image: url('assets/images/breadcrumb.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h2>Shop</h2>
+          <div class="breadcrumb__option">
+            <a href="">Home</a>
+            <span>- Shop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<section class="product">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="product__categories">
+          <div class="product__categories__all">
+            <i class="fas fa-bars"></i>
+            <span>All departments</span>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="product__categories__list">
+            <ul>
+              <li><a href="">Fresh Meat</a></li>
+              <li><a href="">Vegetables</a></li>
+              <li><a href="">Fast Food</a></li>
+              <li><a href="">Fresh Onion</a></li>
+              <li><a href="">Oatmeal</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="product-menu__title">
+          <h3>Product</h3>
+        </div>
+        <div class="md-form">
+          <input type="search" [(ngModel)]="searchText" placeholder="Search text">
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-lg-4" *ngFor="let dataItem of ProductList | 
+          paginate: { 
+            itemsPerPage: 9, 
+            currentPage: page, 
+            totalItems:totaLength
+            } | filter: searchText">
+            <div class="product-item" style="margin-bottom: 4px;">
+              <div class="product-item__pic" style="margin-top: 10px;">
+                <a routerLink="/detail/{{dataItem.productID}}">
+                  <img src="{{dataItem.image}}" width="250" height="250" alt="">
+                </a>
+              </div>
+              <div class="product-item__text">
+                  <div class="product-item__title">
+                    <p><a routerLink="/detail/{{dataItem.productID}}"
+                      style="display: -webkit-box;
+                      max-height: 3.2rem;
+                    -webkit-box-orient: vertical;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: normal;
+                      -webkit-line-clamp: 1;
+                      line-height: 1.6rem;">{{dataItem.productName}}</a></p>
+                    <h5>{{dataItem.retailPrice}} $</h5>
+                  </div>
+                  <div type="button" class="product-item__button" (click)="_addItemToCart(dataItem.productID,  1,1,dataItem.retailPrice * dataItem.quanti)" >
+                    <a ><img src="assets/images/gohang2.png" width="40" height="40" alt="">
+                    <i  class="fas fa-shopping-cart">
+                      
+                    </i></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div style="margin-left: 160px;" class="product-pagination">
+              <br>
+              <pagination-controls (pageChange)="page = $event"></pagination-controls>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

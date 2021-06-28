@@ -1,0 +1,63 @@
+<app-header></app-header>
+<Br>
+<section class="login">
+    <div class="container">
+      <div class="row justify-content-center pad-in">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                <img src="assets/images/bg-login.jpg" height="400px" width="540px"></div>
+
+              <div class="col-lg-6 bg">
+                <div class="wrapper">
+                  <br>
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                  </div>
+                  <form id="loginForm" #loginForm="ngForm" (ngSubmit)="onSubmit()" >
+                    <!-- Tên đăng nhập-->
+                    <div class="form-group">
+                      <label for="email">Tài khoản</label>
+                      <input type="email" ngModel name="email" #email="ngModel"
+                      id="email" aria-describedby="emailHid" 
+                      class="form-control " 
+                         placeholder="Enter Email Address..." required minlength="3">
+                      <small id="emailHid" *ngIf="!email?.valid && (email?.dirty || email?.touched)" class="form-text text-muted">Email is invalid or empty</small>
+                    </div>
+                    <!-- Mật khẩu-->
+                    <div class="form-group">
+                      <label for="email">Mật khẩu</label>
+                      <input type="password" ngModel name="password"  #password="ngModel"
+                      id="password" aria-describedby="passwordHid"
+                      class="form-control" 
+                        placeholder="Password" required>
+                        <small id="passwordHid" *ngIf="!password?.valid && (password?.dirty || password?.touched)" class="form-text text-muted">Password is invalid or empty</small>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox small">
+                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                        <label class="custom-control-label" for="customCheck">Remember
+                          Me</label>
+                      </div>
+                    </div>
+                    <a  class="btn btn-primary btn-user btn-block login-btn">
+                      <button class="btn btn-primary">Login</button>
+                    </a>
+                  </form>
+                  <hr>
+                  <div class="text-center create">
+                    <a class="small" routerLink="/regis" >Create an Account!</a>
+                  </div>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Br>
+  <app-footer></app-footer>

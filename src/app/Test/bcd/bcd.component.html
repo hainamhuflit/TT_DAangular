@@ -1,0 +1,32 @@
+<app-header></app-header>
+<section>
+    <div class="spacer">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-9">
+            <div class="row shop-listing">
+              <div class="col-lg-4" *ngFor="let product of ProductList">
+                <div class="card shop-hover border-0">
+                    <img src="{{product.image}}" width="250" height="250" alt="">
+                  <div class="card-img-overlay align-items-center">
+                    <button class="btn btn-md btn-info" (click)="_addItemToCart(product.productID,  1,1,product.retailPrice * product.quanti)">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="card border-0">
+                  <h6>
+                    <a href="#" class="link">{{ product.productName }}</a>
+                  </h6>
+                  <h6 class="subtitle">by Wisdom</h6>
+                  <h5 class="font-medium m-b-30">
+                    ${{product.retailPrice}}
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
