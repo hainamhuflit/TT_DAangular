@@ -125,7 +125,8 @@ import { AdminHeaderComponent } from './header-footer/admin-header/admin-header.
     FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
-    RouterModule
+    RouterModule,
+    CarouselModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]
